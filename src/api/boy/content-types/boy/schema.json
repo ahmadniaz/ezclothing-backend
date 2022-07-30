@@ -4,7 +4,8 @@
   "info": {
     "singularName": "boy",
     "pluralName": "boys",
-    "displayName": "Boys"
+    "displayName": "Boys",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,26 +19,27 @@
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "price": {
       "type": "biginteger"
-    },
-    "quantity": {
-      "type": "richtext"
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "boys"
+    },
+    "quantity": {
+      "type": "biginteger"
     }
   }
 }

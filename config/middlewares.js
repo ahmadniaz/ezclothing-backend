@@ -1,4 +1,5 @@
 module.exports = [
+  // The array is pre-populated with internal, built-in middlewares, prefixed by `strapi::`
   "strapi::errors",
   {
     name: "strapi::security",
@@ -27,7 +28,6 @@ module.exports = [
     },
   },
   "strapi::cors",
-  "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
   "strapi::body",

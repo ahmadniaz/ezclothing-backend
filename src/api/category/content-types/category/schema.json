@@ -38,6 +38,12 @@
       "relation": "manyToMany",
       "target": "api::woman.woman",
       "inversedBy": "categories"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "categories"
     }
   }
 }

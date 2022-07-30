@@ -37,7 +37,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "women"
+      "mappedBy": "women"
     }
   }
 }
