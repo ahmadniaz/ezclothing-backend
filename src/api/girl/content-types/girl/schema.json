@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "girls",
+  "info": {
+    "singularName": "girl",
+    "pluralName": "girls",
+    "displayName": "Girls"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "girls"
+    }
+  }
+}

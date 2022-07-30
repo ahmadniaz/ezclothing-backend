@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boys": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::boy.boy",
+      "inversedBy": "categories"
+    },
+    "name": {
+      "type": "string"
+    },
+    "girls": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::girl.girl",
+      "inversedBy": "categories"
+    },
+    "men": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::man.man",
+      "inversedBy": "categories"
+    },
+    "women": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::woman.woman",
+      "inversedBy": "categories"
+    }
+  }
+}

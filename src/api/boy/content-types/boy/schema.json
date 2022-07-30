@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boys",
+  "info": {
+    "singularName": "boy",
+    "pluralName": "boys",
+    "displayName": "Boys"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "quantity": {
+      "type": "richtext"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "boys"
+    }
+  }
+}
