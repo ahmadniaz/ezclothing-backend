@@ -16,6 +16,7 @@ module.exports = {
    */
 
   create: async (ctx) => {
+    console.log(ctx.request.body);
     const { address, total, products, items, city, token } = JSON.parse(
       ctx.request.body
     );
