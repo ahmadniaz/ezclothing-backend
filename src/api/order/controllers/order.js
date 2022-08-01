@@ -17,9 +17,8 @@ module.exports = {
 
   create: async (ctx) => {
     console.log(ctx.request.body);
-    const { address, total, products, items, city, token } = JSON.parse(
-      ctx.request.body
-    );
+    const { data } = JSON.parse(ctx.request.body);
+    const { address, total, products, items, city, token } = data;
     const stripeAmount = Math.floor(total * 100);
     // charge on stripe
     const charge = await stripe.charges.create({
